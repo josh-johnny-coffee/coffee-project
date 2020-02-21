@@ -1,5 +1,8 @@
 body {
     margin: 50px;
+    background-image: url("img/coffee-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 table {
@@ -14,6 +17,8 @@ td, th {
 
 .mainHeader {
     text-align: center;
+    font-family: 'Krona One', sans-serif;
+    color: #ffb1b5;
 }
 
 
@@ -21,6 +26,13 @@ option {
     text-align: center;
 }
 
-.make-bold {
+#coffee-selector{
     font-weight: bold;
+    color: #615640;
+}
+
+
+#roast-selector{
+    font-weight: bold;
+    color: sandybrown;
 }

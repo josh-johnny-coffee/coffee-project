@@ -5,9 +5,10 @@
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Krona+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 class="mainHeader">Coffee!</h1>
+    <h1 class="mainHeader">Where you bean all my life?</h1>
     <hr>
     <div class="row">
         <div class="col-6">
@@ -35,7 +36,7 @@
         </div>
         <div class="col-6">
             <form name="form1">
-                <label class="make-bold" for="roast-selection">Roast</label>
+                <label id="roast-selector" for="roast-selection">Roast</label>
                 <br>
                 <select id="roast-selection" class="theSelect custom-select">
                     <option id="all">all</option>
@@ -45,7 +46,7 @@
                 </select>
                 <br>
                 <br>
-                <label class="make-bold" for="roastType">Coffee Name</label>
+                <label id="coffee-selector" for="roastType">Coffee Name</label>
                 <input type="search" class="form-control" id="roastType" name="roastType">
                 <br>
                 <button type="submit"  id="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
