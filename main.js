@@ -2,6 +2,32 @@
 
 // document.getElementById('roastType').addEventListener('search', roastTypeFunc);
 
+
+// var thing = document.getElementsByClassName('theSelect');
+// thing[0].addEventListener('change', updateCoffees, false);
+
+document.getElementsByClassName('theSelect')[0].addEventListener('change', updateCoffees, false);
+
+
+//
+// var thing = document.getElementsByClassName('theSelect');
+//     thing[0].addEventListener('change', updateCoffees, false);
+//     thing[1].addEventListener('change', updateCoffees, false);
+    // thing[2].addEventListener('change', updateCoffees, false);
+// document.getElementById('medium').addEventListener('click', updateCoffees, false);
+// document.getElementById('dark').addEventListener('click', updateCoffees, false);
+
+document.getElementById('roastType').addEventListener('click', addKey, false);
+function addKey() {
+    document.addEventListener('keyup', updateCoffees, false);
+    document.getElementById('roastType').addEventListener('change', removeCoffee, false);
+}
+
+function removeCoffee() {
+    document.removeEventListener('keyup', updateCoffees, false);
+    document.getElementById('roastType').removeEventListener('change', removeCoffee, false);
+}
+
 function roastTypeFunc(input) {
     console.log('hi');
 }
@@ -33,16 +59,17 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    console.log(roastSelection.value);
     var filteredCoffees = [];
     var roast = document.forms.form1.roastType.value;
-    // console.log(roast);
+    console.log(roast);
     coffees.forEach(function(coffee) {
 
         // console.log(coffee.roast);
         // console.log(roast);
         // console.log(coffee.name.includes(roast));
 
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(roast.toLowerCase())) {
+        if ((coffee.roast === selectedRoast || selectedRoast === 'all') && coffee.name.toLowerCase().includes(roast.toLowerCase())) {
             filteredCoffees.push(coffee);
         }
     });
