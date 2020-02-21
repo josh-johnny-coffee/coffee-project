@@ -3,39 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1 class="mainHeader">Coffee!</h1>
+    <hr>
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <div  class="col-6">
+            <table>
+                <thead>
 
-    <div class="row"></div>
+                </thead>
 
-    <form name="form1">
-        <label for="roast-selection"></label>
-        <select id="roast-selection" class="theSelect">
-            <option id="all">all</option>
-            <option id="light">light</option>
-            <option id="medium">medium</option>
-            <option id="dark">dark</option>
-        </select>
-        <label for="roastType"></label>
-        <input type="search" id="roastType" name="roastType">
-        <input id="submit" type="submit" />
-    </form>
+                <tbody id="coffees">
+
+                </tbody>
+            </table>
+                </div>
+                <div class="col-6"><table>
+                    <thead>
+
+                    </thead>
+
+                    <tbody id="coffees2"></tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <form name="form1">
+                <label class="make-bold" for="roast-selection">Roast</label>
+                <br>
+                <select id="roast-selection" class="theSelect custom-select">
+                    <option id="all">all</option>
+                    <option id="light">light</option>
+                    <option id="medium">medium</option>
+                    <option id="dark">dark</option>
+                </select>
+                <br>
+                <br>
+                <label class="make-bold" for="roastType">Coffee Name</label>
+                <input type="search" class="form-control" id="roastType" name="roastType">
+                <br>
+                <button type="submit"  id="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+<!--                <input id="submit" type="submit" />-->
+            </form>
+        </div>
+    </div>
+
 
 <!--    <form><input type="search" id="roast-type">-->
 <!--        <input id="submit" type="submit" /></form>-->
 
-    <table>
-        <thead>
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
 
     <script src="main.js"></script>
 </body>
