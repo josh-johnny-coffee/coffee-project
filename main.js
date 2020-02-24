@@ -80,6 +80,7 @@ function renderCoffee(coffee) {
 
     var html = '<div class="card cardStuff" style="width: 100%;">';
     html += '<div class="card-body" >';
+    // html += '<img src="img/mug4.png" class="mug">';
     html += '<h5 class="card-title">' + coffee.name + '</h5>';
     html += '<p class="card-text">' + coffee.roast + '</p>';
     html += '</div>';
@@ -134,7 +135,9 @@ function updateCoffees(e) {
         }
     });
 
+
     filteredCoffees.sort();
+    coffees.sort();
     tbody.innerHTML = renderCoffees(filteredCoffees);
     tbody2.innerHTML = renderCoffees2(filteredCoffees);
 }

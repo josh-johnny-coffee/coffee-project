@@ -29,6 +29,15 @@ td, th {
     text-align: center;
     font-family: 'Krona One', sans-serif;
     color: #f5edda;
+
+}
+
+.mug {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 19vh;
+
 }
 
 .coffee-background{
@@ -37,7 +46,17 @@ td, th {
     border:10px solid #98694f;
     border-radius: 5%;
     margin-top: 30px;
+
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky;
+    top: 10px;
+
 }
+
+/*.sticky {*/
+/*    position: -webkit-sticky; !* Required for Safari *!*/
+/*    position: sticky;*/
+/*}*/
 
 .cardStuff {
     margin: 1em;
@@ -45,7 +64,19 @@ td, th {
     border: 10px solid #bfa894;
     color: #f5edda;
     font-family: 'Alegreya Sans', sans-serif;
-    transition: background 0.2s ease-in-out;
+    animation: expand .3s ease-in-out;
+
+}
+
+.card-body {
+}
+
+@keyframes expand {
+    from {
+        transform: scale(0);
+        opacity: 0;
+        background: #5470B0;
+    }
 }
 
 hr {
