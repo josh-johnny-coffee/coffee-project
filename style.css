@@ -21,6 +21,15 @@ td, th {
     color: #ffb1b5;
 }
 
+.cardStuff {
+    margin: 1em;
+    /*width: 100%;*/
+}
+
+.mainHeader {
+    color: ghostwhite;
+}
+
 
 option {
     text-align: center;
