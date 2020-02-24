@@ -32,6 +32,40 @@ function roastTypeFunc(input) {
     console.log('hi');
 }
 
+document.getElementById('submitCreate').addEventListener('click', create);
+
+function create(e) {
+
+    e.preventDefault();
+
+    if (document.forms.form2.createCoffee.value){
+
+        var idNum = coffees.length + 1;
+
+        console.log('creat works');
+
+        var createObj = {
+            id: idNum,
+            name: document.forms.form2.createCoffee.value,
+            roast: document.forms.form2.createRoast.value
+        };
+
+
+        coffees.push(createObj);
+
+
+
+        updateCoffees();
+    }
+
+
+}
+
+// var myCat = 5;
+
+
+
+
 function renderCoffee(coffee) {
     // var html = '<tr class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
@@ -39,9 +73,18 @@ function renderCoffee(coffee) {
     // html += '<td>' + coffee.roast + '</td>';
     // html += '</tr>';
 
-    var html = '<div class="coffee">';
-    html += '<h1>' + coffee.name + '</h1>';
-    html += '<p>' + coffee.roast + '</p>';
+    // var html = '<div class="coffee">';
+    // html += '<h1>' + coffee.name + '</h1>';
+    // html += '<p>' + coffee.roast + '</p>';
+
+
+    var html = '<div class="card cardStuff" style="width: 100%;">';
+    html += '<div class="card-body" >';
+    html += '<h5 class="card-title">' + coffee.name + '</h5>';
+    html += '<p class="card-text">' + coffee.roast + '</p>';
+    html += '</div>';
+    html += '</div>';
+
 
     return html;
 }
@@ -71,7 +114,10 @@ function renderCoffees2(coffees) {
 
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    if (e){
+        e.preventDefault(); // don't submit the form, we just want to update the data
+    }
+
     var selectedRoast = roastSelection.value;
     console.log(roastSelection.value);
     var filteredCoffees = [];
@@ -111,10 +157,13 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
 var tbody = document.querySelector('#coffees');
 var tbody2 = document.querySelector('#coffees2');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var roastCreate = document.querySelector('#createRoast');
+var coffeeCreate = document.querySelector('#createCoffee');
 
 tbody.innerHTML = renderCoffees(coffees);
 tbody2.innerHTML = renderCoffees2(coffees);

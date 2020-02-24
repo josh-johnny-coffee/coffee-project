@@ -6,9 +6,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Krona+One&display=swap" rel="stylesheet">
-</head>
+
 <body>
+
+<div class="headerStuff2">
     <h1 class="mainHeader">Where you bean all my life?</h1>
+</div>
+
+
     <hr>
     <div class="row">
         <div class="col-6">
@@ -52,7 +57,27 @@
                 <button type="submit"  id="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
 <!--                <input id="submit" type="submit" />-->
             </form>
+
+            <form name="form2">
+                <h3>add coffee</h3>
+                <label id="createRoastLabel" for="createRoast">Roast</label>
+                <br>
+                <select id="createRoast" class="theSelect custom-select">
+                    <option id="lightCreate">light</option>
+                    <option id="mediumCreate">medium</option>
+                    <option id="darkCreate">dark</option>
+                </select>
+                <br>
+                <br>
+                <label id="createCoffeeLabel" for="roastType">Coffee Name</label>
+                <input type="search" class="form-control" id="createCoffee" name="createCoffee">
+                <br>
+                <button type="submit" id="submitCreate" class="btn btn-primary btn-lg btn-block">Submit</button>
+                <!--                <input id="submit" type="submit" />-->
+            </form>
         </div>
+
+
     </div>
 
 
