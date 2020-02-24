@@ -1,13 +1,23 @@
 body {
     margin: 50px;
-    background-image: url("img/coffee-background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.coffee-video{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
 }
 
 table {
     border-collapse: collapse;
     margin: 15px 0;
+}
+
+.coffee-table {
+    width: 100%;
 }
 
 td, th {
@@ -18,21 +28,37 @@ td, th {
 .mainHeader {
     text-align: center;
     font-family: 'Krona One', sans-serif;
-    color: #ffb1b5;
+    color: #f5edda;
+}
+
+.coffee-background{
+    background-color: #ca9e7b;
+    padding: 20px;
+    border:10px solid #98694f;
+    border-radius: 5%;
+    margin-top: 30px;
 }
 
 .cardStuff {
     margin: 1em;
-    /*width: 100%;*/
+    background-color: #603839;
+    border: 10px solid #bfa894;
+    color: #f5edda;
+    font-family: 'Alegreya Sans', sans-serif;
+    transition: background 0.2s ease-in-out;
 }
 
-.mainHeader {
-    color: ghostwhite;
+hr {
+    background-color: #f5edda;
+    width: 60%;
 }
-
 
 option {
     text-align: center;
+}
+
+#add-id{
+    margin-top: 25px;
 }
 
 #coffee-selector{
@@ -43,5 +69,27 @@ option {
 
 #roast-selector{
     font-weight: bold;
-    color: sandybrown;
+    color: #363636;
+}
+
+#createRoastLabel{
+    font-weight: bold;
+    color: #363636;
+}
+
+#createCoffeeLabel{
+    font-weight: bold;
+    color: #363636;
+}
+
+#submit{
+    background-color: #363636;
+    border-color: #66462f;
+    color: #f5edda;
+}
+
+#submitCreate{
+    background-color: #363636;
+    border-color: #66462f;
+    color: #f5edda;
 }
